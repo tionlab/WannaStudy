@@ -1,20 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 
-import './index.css';
-import 'src/assets/clear.css';
-import 'src/assets/font.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import "./index.css";
+import "./assets/clear.css";
+import "./assets/font.css";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-serviceWorker.unregister();
+ReactDOM.render(<App />, document.getElementById("root"));
 
 if (module.hot && !window.frameElement) {
-  console.log('HMR enabled');
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default;
-    ReactDOM.render(<NextApp />, document.getElementById('root'));
-  });
+    console.log("HMR enabled");
+    module.hot.accept("./App", () => {
+        const NextApp = require("./App").default;
+        ReactDOM.render(<NextApp />, document.getElementById("root"));
+    });
 }
